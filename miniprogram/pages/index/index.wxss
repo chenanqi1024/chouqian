@@ -1,0 +1,503 @@
+/** index.wxss **/
+page {
+  min-height: 100%;
+  background: #100b25;
+}
+
+.fortune-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(83, 61, 143, 0.42), rgba(20, 12, 45, 0) 40%),
+    linear-gradient(165deg, #1c123d 0%, #100b25 55%, #090719 100%);
+  color: #f8edcf;
+}
+
+.fortune-page::before,
+.fortune-page::after {
+  position: absolute;
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  background: #f1d79b;
+  box-shadow:
+    92rpx 80rpx 0 rgba(241, 215, 155, 0.65),
+    520rpx 140rpx 0 rgba(241, 215, 155, 0.4),
+    620rpx 370rpx 0 rgba(241, 215, 155, 0.7),
+    150rpx 540rpx 0 rgba(241, 215, 155, 0.45),
+    570rpx 760rpx 0 rgba(241, 215, 155, 0.35),
+    70rpx 980rpx 0 rgba(241, 215, 155, 0.55);
+  content: '';
+}
+
+.fortune-page::before {
+  top: 70rpx;
+  left: 28rpx;
+}
+
+.fortune-page::after {
+  top: 210rpx;
+  left: 350rpx;
+  opacity: 0.55;
+  transform: scale(0.65);
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 74rpx 42rpx 54rpx;
+}
+
+.cosmos {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.24;
+  filter: blur(6rpx);
+}
+
+.cosmos-one {
+  top: -170rpx;
+  right: -130rpx;
+  width: 430rpx;
+  height: 430rpx;
+  background: #7d5bc4;
+}
+
+.cosmos-two {
+  bottom: 150rpx;
+  left: -190rpx;
+  width: 450rpx;
+  height: 450rpx;
+  background: #3b68a1;
+}
+
+.cosmos-three {
+  right: -160rpx;
+  bottom: -120rpx;
+  width: 360rpx;
+  height: 360rpx;
+  background: #9e673f;
+}
+
+.orbit {
+  position: absolute;
+  border: 2rpx solid rgba(213, 184, 121, 0.12);
+  border-radius: 50%;
+}
+
+.orbit-large {
+  top: 260rpx;
+  left: -260rpx;
+  width: 980rpx;
+  height: 980rpx;
+  transform: rotate(-18deg);
+}
+
+.orbit-small {
+  top: 420rpx;
+  right: -180rpx;
+  width: 470rpx;
+  height: 470rpx;
+}
+
+.title-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-ornament {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+  color: #d8b975;
+  font-size: 18rpx;
+}
+
+.ornament-line {
+  width: 52rpx;
+  height: 1rpx;
+  margin: 0 16rpx;
+  background: rgba(216, 185, 117, 0.5);
+}
+
+.eyebrow {
+  color: #bca96f;
+  font-size: 18rpx;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+}
+
+.title {
+  margin-top: 12rpx;
+  color: #fff5dc;
+  font-size: 54rpx;
+  font-weight: 600;
+  letter-spacing: 8rpx;
+  text-shadow: 0 0 28rpx rgba(236, 209, 145, 0.2);
+}
+
+.date-note {
+  margin-top: 14rpx;
+  color: rgba(225, 211, 180, 0.65);
+  font-size: 21rpx;
+  letter-spacing: 4rpx;
+}
+
+.card-stage {
+  position: relative;
+  width: 520rpx;
+  height: 720rpx;
+  margin-top: 50rpx;
+}
+
+.card-shadow {
+  position: absolute;
+  right: 16rpx;
+  bottom: -20rpx;
+  left: 16rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: rgba(2, 1, 10, 0.65);
+  filter: blur(24rpx);
+}
+
+.fortune-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 48rpx 46rpx 36rpx;
+  overflow: hidden;
+  border: 3rpx solid #c8a75d;
+  border-radius: 30rpx;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(89, 68, 148, 0.5), rgba(24, 16, 56, 0) 34%),
+    linear-gradient(150deg, #312154 0%, #1c123b 54%, #16102e 100%);
+  box-shadow:
+    inset 0 0 0 8rpx #18102f,
+    inset 0 0 0 10rpx rgba(209, 177, 105, 0.55),
+    0 30rpx 60rpx rgba(0, 0, 0, 0.42);
+  transition: transform 0.28s ease-out, box-shadow 0.28s ease-out;
+}
+
+.fortune-card::before,
+.fortune-card::after {
+  position: absolute;
+  border-radius: 50%;
+  content: '';
+}
+
+.fortune-card::before {
+  top: 140rpx;
+  width: 370rpx;
+  height: 370rpx;
+  border: 2rpx solid rgba(219, 190, 125, 0.16);
+}
+
+.fortune-card::after {
+  top: 188rpx;
+  width: 274rpx;
+  height: 274rpx;
+  border: 2rpx dashed rgba(219, 190, 125, 0.16);
+}
+
+.card-frame {
+  position: absolute;
+  top: 22rpx;
+  right: 22rpx;
+  bottom: 22rpx;
+  left: 22rpx;
+  border: 2rpx solid rgba(211, 178, 105, 0.44);
+  border-radius: 20rpx;
+}
+
+.corner {
+  position: absolute;
+  z-index: 2;
+  color: #d3b369;
+  font-size: 18rpx;
+}
+
+.corner-left-top {
+  top: 30rpx;
+  left: 32rpx;
+}
+
+.corner-right-top {
+  top: 30rpx;
+  right: 32rpx;
+}
+
+.corner-left-bottom {
+  bottom: 30rpx;
+  left: 32rpx;
+}
+
+.corner-right-bottom {
+  right: 32rpx;
+  bottom: 30rpx;
+}
+
+.card-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-number {
+  color: rgba(218, 190, 129, 0.68);
+  font-size: 16rpx;
+  letter-spacing: 6rpx;
+}
+
+.card-keyword {
+  margin-top: 12rpx;
+  color: #f1d99f;
+  font-size: 26rpx;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+}
+
+.oracle-symbol {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: 22rpx;
+}
+
+.symbol-orbit {
+  position: absolute;
+  border: 2rpx solid rgba(225, 197, 134, 0.4);
+  border-radius: 50%;
+}
+
+.symbol-orbit-outer {
+  width: 222rpx;
+  height: 222rpx;
+}
+
+.symbol-orbit-inner {
+  width: 160rpx;
+  height: 160rpx;
+  border-style: dashed;
+  opacity: 0.6;
+}
+
+.symbol {
+  color: #f2d38d;
+  font-size: 104rpx;
+  line-height: 1;
+  text-shadow: 0 0 30rpx rgba(239, 208, 137, 0.38);
+}
+
+.symbol-star {
+  position: absolute;
+  color: #dfc27e;
+  font-size: 22rpx;
+}
+
+.symbol-star-left {
+  left: 0;
+}
+
+.symbol-star-right {
+  right: 0;
+}
+
+.result-area {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+}
+
+.fortune-level {
+  margin-top: 4rpx;
+  color: #f0d491;
+  font-size: 34rpx;
+  font-weight: 600;
+  letter-spacing: 8rpx;
+}
+
+.fortune-message {
+  margin-top: 12rpx;
+  color: rgba(255, 246, 224, 0.88);
+  font-size: 24rpx;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 76%;
+  margin-top: 18rpx;
+  color: #c9aa65;
+  font-size: 14rpx;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1rpx;
+  margin: 0 12rpx;
+  background: rgba(207, 174, 101, 0.35);
+}
+
+.fortune-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+  font-size: 19rpx;
+  letter-spacing: 3rpx;
+}
+
+.meta-label {
+  color: rgba(222, 206, 171, 0.55);
+}
+
+.meta-value {
+  margin-left: 16rpx;
+  color: #dfc17d;
+}
+
+.advice-tag {
+  margin-top: 14rpx;
+  padding: 9rpx 20rpx;
+  border: 1rpx solid rgba(211, 179, 109, 0.38);
+  border-radius: 999rpx;
+  background: rgba(220, 184, 103, 0.08);
+  color: #e8d3a1;
+  font-size: 19rpx;
+  letter-spacing: 2rpx;
+}
+
+.card-footer {
+  position: relative;
+  z-index: 2;
+  color: rgba(216, 188, 127, 0.48);
+  font-size: 14rpx;
+  letter-spacing: 5rpx;
+}
+
+.fortune-card--drawing {
+  animation: draw-card 0.16s ease-in-out infinite alternate;
+  box-shadow:
+    inset 0 0 0 8rpx #18102f,
+    inset 0 0 0 10rpx rgba(235, 204, 137, 0.7),
+    0 0 60rpx rgba(167, 125, 225, 0.32);
+}
+
+.fortune-card--drawn .result-area {
+  animation: reveal 0.42s ease-out;
+}
+
+.fortune-card--drawn .oracle-symbol {
+  animation: symbol-reveal 0.42s ease-out;
+}
+
+.draw-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 520rpx;
+  height: 94rpx;
+  margin-top: 54rpx;
+  border: 2rpx solid rgba(237, 207, 142, 0.72);
+  border-radius: 999rpx;
+  background: rgba(214, 177, 95, 0.12);
+  box-shadow:
+    inset 0 0 22rpx rgba(246, 217, 151, 0.08),
+    0 12rpx 34rpx rgba(0, 0, 0, 0.24);
+  color: #f3dba2;
+  font-size: 27rpx;
+  font-weight: 600;
+  letter-spacing: 8rpx;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.draw-button::after {
+  border: none;
+}
+
+.draw-button--hover {
+  background: rgba(224, 190, 113, 0.24);
+}
+
+.draw-button--disabled {
+  opacity: 0.65;
+}
+
+.button-mark {
+  margin: 0 20rpx;
+  font-size: 15rpx;
+}
+
+.footer-note {
+  margin-top: 30rpx;
+  color: rgba(208, 193, 162, 0.42);
+  font-size: 18rpx;
+  letter-spacing: 2rpx;
+}
+
+@keyframes draw-card {
+  from {
+    transform: rotate(-1deg) translateX(-5rpx) translateY(-4rpx);
+  }
+
+  to {
+    transform: rotate(1deg) translateX(5rpx) translateY(2rpx);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14rpx);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes symbol-reveal {
+  from {
+    opacity: 0.4;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fortune-card--drawing,
+  .fortune-card--drawn .result-area,
+  .fortune-card--drawn .oracle-symbol {
+    animation: none;
+  }
+}

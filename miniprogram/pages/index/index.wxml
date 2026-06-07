@@ -1,0 +1,79 @@
+<!-- index.wxml -->
+<view class="fortune-page">
+  <view class="cosmos cosmos-one"></view>
+  <view class="cosmos cosmos-two"></view>
+  <view class="cosmos cosmos-three"></view>
+  <view class="orbit orbit-large"></view>
+  <view class="orbit orbit-small"></view>
+
+  <view class="content">
+    <view class="title-area">
+      <view class="title-ornament">
+        <text>✦</text>
+        <view class="ornament-line"></view>
+        <text>☾</text>
+        <view class="ornament-line"></view>
+        <text>✦</text>
+      </view>
+      <text class="eyebrow">DAILY ORACLE</text>
+      <text class="title">🦶今日运势</text>
+      <text class="date-note">静心 · 默念 · 抽取今日指引</text>
+    </view>
+
+    <view class="card-stage">
+      <view class="card-shadow"></view>
+      <view class="fortune-card {{isDrawing ? 'fortune-card--drawing' : ''}} {{hasDrawn ? 'fortune-card--drawn' : ''}}">
+        <view class="card-frame"></view>
+        <view class="corner corner-left-top">✦</view>
+        <view class="corner corner-right-top">✦</view>
+        <view class="corner corner-left-bottom">✦</view>
+        <view class="corner corner-right-bottom">✦</view>
+
+        <view class="card-top">
+          <text class="card-number">NO. VII</text>
+          <text class="card-keyword">{{keyword}}</text>
+        </view>
+
+        <view class="oracle-symbol">
+          <view class="symbol-orbit symbol-orbit-outer"></view>
+          <view class="symbol-orbit symbol-orbit-inner"></view>
+          <text class="symbol">{{symbol}}</text>
+          <text class="symbol-star symbol-star-left">✧</text>
+          <text class="symbol-star symbol-star-right">✧</text>
+        </view>
+
+        <view class="result-area">
+          <text wx:if="{{level}}" class="fortune-level">{{level}}</text>
+          <text class="fortune-message">{{message}}</text>
+          <view class="divider">
+            <view class="divider-line"></view>
+            <text>✦</text>
+            <view class="divider-line"></view>
+          </view>
+          <view class="fortune-meta">
+            <text class="meta-label">幸运色</text>
+            <text class="meta-value">{{luckyColor}}</text>
+          </view>
+          <view wx:if="{{advice}}" class="advice-tag">
+            <text>{{advice}}</text>
+          </view>
+        </view>
+
+        <text class="card-footer">THE FORTUNE WITHIN</text>
+      </view>
+    </view>
+
+    <button
+      class="draw-button {{isDrawing ? 'draw-button--disabled' : ''}}"
+      bindtap="drawFortune"
+      disabled="{{isDrawing}}"
+      hover-class="draw-button--hover"
+    >
+      <text class="button-mark">✦</text>
+      <text>{{buttonText}}</text>
+      <text class="button-mark">✦</text>
+    </button>
+
+    <text class="footer-note">牌面仅作今日灵感 · 相信自己的选择</text>
+  </view>
+</view>
